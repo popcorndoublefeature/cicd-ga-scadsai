@@ -33,7 +33,7 @@ jobs:
     steps:
       # Checkout the repository
       - uses: actions/checkout@v5
-      # Small footprint conda with built-in caching
+      # Small footprint conda with built-in caching (only 50 MB insted of 400 MB conda)
       - uses: mamba-org/setup-micromamba@v2
         with:
           environment-file: ${{ env.CONDA_ENV_FILE }}
